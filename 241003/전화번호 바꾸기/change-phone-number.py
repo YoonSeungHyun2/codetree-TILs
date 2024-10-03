@@ -2,7 +2,7 @@ num = input()
 
 arr = num.split("-")
 
-a = int()
+a = int(arr[0])
 b = int(arr[1])
 c = int(arr[2])
 
