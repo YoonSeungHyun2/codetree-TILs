@@ -1,4 +1,7 @@
-a = int(input())
+score = int(input())
 
-result = a if a == 100 else "failure"
-print("pass")
+if score == 100:
+    print("pass")
+
+else:
+    print("failure")
