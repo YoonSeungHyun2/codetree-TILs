@@ -1,10 +1,13 @@
-# 두 정수 입력받기
 a, b = map(int, input().split())
 
-# 각 조건에 대한 결과를 출력
-print(1 if a >= b else 0)  # a가 b보다 같거나 큰가?
-print(1 if a > b else 0)   # a가 b보다 큰가?
-print(1 if b >= a else 0)  # b가 a보다 같거나 큰가?
-print(1 if b > a else 0)   # b가 a보다 큰가?
-print(1 if a == b else 0)  # a와 b가 같은가?
-print(1 if a != b else 0)  # a와 b가 다른가?
+# if True:  # 항상 True이므로 이 조건은 항상 실행됩니다.
+#     print(1)
+# elif False:  # 항상 False이므로 이 조건은 절대 실행되지 않습니다.
+#     print(0)
+
+print(int(a >= b))
+print(int(a > b))
+print(int(a <= b))
+print(int(a < b))
+print(int(a == b))
+print(int(a != b))
