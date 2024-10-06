@@ -16,9 +16,7 @@ for i in range(3):
     if coughs[i] == "Y" and temperatures[i] >= 37:
         A_count += 1  # A로 분류
     elif coughs[i] == "N" and temperatures[i] >= 37:
-        print("B")
     elif coughs[i] == "Y" and temperatures[i] < 37:
-        print("C")
 
 # A_count가 2 이상일 때 위급상황
 if A_count >= 2:
