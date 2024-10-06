@@ -7,4 +7,4 @@ elif 6 <= a:
 elif 9 <= a:
     print("Fall")
 else:
-    print("winter")
+    print("Winter")
