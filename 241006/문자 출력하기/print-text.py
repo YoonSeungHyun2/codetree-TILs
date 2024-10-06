@@ -1,3 +1,3 @@
-n = "G"
-for i in range(7):
-    print("A", end ="")
+n = str(input())
+for _ in range(8):
+    print(n, end ="")
