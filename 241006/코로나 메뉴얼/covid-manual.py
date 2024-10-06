@@ -1,25 +1,23 @@
-A_c, A_t = input().split()
-B_c, B_t = input().split()
-C_c, C_t = input().split()
+# 검사자 정보를 저장할 리스트
+coughs = []
+temperatures = []
 
-A_t = int(A_t)
-B_t = int(B_t)
-C_t = int(C_t)
+# 각 검사자에 대한 입력 받기
+for _ in range(3):
+    symptom, temp = input().split()  # 감기 증상과 체온 입력 받기
+    coughs.append(symptom)            # 증상 리스트에 추가
+    temperatures.append(int(temp))    # 체온 리스트에 추가
 
-# 각 검사자의 증상 여부를 리스트로 저장
-coughs = [A_c, B_c, C_c]
-temperatures = [A_t, B_t, C_t]
-
+# A로 가는 사람 수 카운트
 A_count = 0
 
+# 각 검사자의 상태를 확인
 for i in range(3):
     if coughs[i] == "Y" and temperatures[i] >= 37:
-        A_count += 1  # A로 분류
-    elif coughs[i] == "N" and temperatures[i] >= 37:
-    elif coughs[i] == "Y" and temperatures[i] < 37:
+        A_count += 1  # 증상 있음, 체온 37℃ 이상 => A
 
 # A_count가 2 이상일 때 위급상황
 if A_count >= 2:
-    print("E")
+    print("E")  # 위급상황
 else:
-    print("N")
+    print("N")  # 위급상황이 아님
