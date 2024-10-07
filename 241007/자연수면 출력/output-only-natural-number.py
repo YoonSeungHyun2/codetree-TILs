@@ -1,7 +1,7 @@
 a, b = map(int, input().split())
 
 
-if a == abs(a):
+if a > 0:
     for i in range(b):
         print(a, end= "")
 else:
