@@ -1,7 +1,8 @@
 a, b = map(int, input().split())
 
-# a의 b 제곱 계산
-prod = a ** b
+prod = 1
 
-# 결과 출력
+for i in range(b):
+    prod *= a
+
 print(prod)
