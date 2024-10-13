@@ -1,8 +1,9 @@
+# 정수 a, b 입력받기
 a, b = map(int, input().split())
 
-# 큰 숫자부터 작은 숫자 순으로 짝수 구구단 출력
-for j in range(a, 10, a): 
+# b단부터 a단까지 출력
+for j in range(2, 10, 2):  # 2, 4, 6, 8을 곱하기
     result = []
-    for i in range(b, 1, -1):  
-        result.append(f"{i} * {j} = {i * j}")
-    print(" / ".join(result))
+    for i in range(b, a - 1, -1):  # b단에서 a단까지 감소
+        result.append(f"{i} * {j} = {i * j}")  # 구구단 형식으로 저장
+    print(" / ".join(result))  # 결과를 '/'로 연결하여 출력
