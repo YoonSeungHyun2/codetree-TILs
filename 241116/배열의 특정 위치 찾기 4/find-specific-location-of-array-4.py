@@ -10,7 +10,7 @@ for num in numbers:
         multiples_of_two.append(num)
 
 # 합과 평균 계산
-count = len(multiples_of_two)
-total = sum(multiples_of_two)
+count = len(multiples_of_two) // 해당하는 갯수
+total = sum(multiples_of_two) // 해당하는 값의 합계
 # 출력
 print(f"{count} {total}")
