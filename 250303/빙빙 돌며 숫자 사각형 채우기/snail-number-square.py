@@ -1,25 +1,34 @@
-n, m = tuple(map(int, input().split()))\
+import sys
 
-arr = [
-    [0]*m
-    for _ in range(n)
-]
+input = sys.stdin.readline
 
-# 밑, 오, 위, 왼
-dx = [0, 1, 0, -1]
-dy = [1, 0, -1, 0]
-
+# 0 1 2 3 = 오 아 왼 위
 d = 0
 x = 0
 y = 0
-for i in range(1, n*m+1):
-    arr[y][x] = i
-    if (x+dx[d%4] >= m or y+dy[d%4] >= n) or arr[y+dy[d%4]][x+dx[d%4]] != 0:
-        d += 1
-    x += dx[d%4]
-    y += dy[d%4]
 
-for i in range(n):
-    for a in arr[i]:
-        print(a, end=' ')
-    print()
+dy = [1, 0, -1, 0]
+dx = [0, 1, 0, -1]
+
+n, m = map(int, input().split(" "))
+graph = [[0 for _ in range(m)] for _ in range(n)]
+
+
+graph[x][y] = 1
+
+for i in range(2,  n* m+1):
+    nx = x + dx[d]
+    ny = y + dy[d]
+
+    # 방향과 방문한 값인지 확인
+    if not(0<= nx and nx < n and 0<= ny and ny <m) or graph[nx][ny] != 0:
+        d = (d+1) % 4
+
+    x = x + dx[d]
+    y = y + dy[d]
+    
+    graph[x][y] = i    
+
+
+for row in graph:
+    print(*row)
