@@ -24,4 +24,3 @@ for _ in range(n):
         x, y = nx, ny
 
 print(x, y)
-출처: https://dodenkr.tistory.com/65 [zheld.doden:티스토리]
