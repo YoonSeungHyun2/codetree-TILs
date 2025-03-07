@@ -1,10 +1,3 @@
-# n = int(input())
-# people = [tuple(input().split()) for _ in range(n)]
-# pos = [int(p[0]) for p in people]
-# alpha = [p[1] for p in people]
-
-# # Please write your code here.
-
 # n 입력
 n = int(input())
 # linear
