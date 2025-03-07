@@ -58,4 +58,3 @@ for i in range(1,10):
                 cnt += 1 
             
 print(cnt)
-출처: https://suhastroy.tistory.com/360 [진취적 삶:티스토리]
